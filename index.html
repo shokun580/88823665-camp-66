@@ -1,58 +1,89 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Page Title</title>
     <meta charset="UTF-8" />
-  </head>  
-  <body>
+</head>
 
-    <h1>Workshop #HTML - Form </Header></h1>
-    <form>
-    <table>
-        <tr>
-           <td> <label for="fname">ชื่อ:</label></td>
-           <td> <input type="text" id="fname" name="fname"><br></td>
-        </tr>
-        <tr>
-            <td> <label for="lname">สกุล:</label></td>
-            <td> <input type="text" id="lname" name="lname"><br></td>
-        </tr>
-        <tr>
-            <td> <label for="Brithday">วัน/เดือน/ปีเกิด:</label></td>
-            <td>  <input type="date" id="age" ><br></td>
-        </tr>
-        <tr>
-            <td> <label for="age">อายุ:</label></td>
-            <td>  <input type="number" id="age" ><br></td>
-        </tr>
-        <tr>
-            <td> <label for="sex">เพศ:</label></td>
-            <input type="radio" id="html" name="fav_language" value="HTML">
-            <label for="html">HTML</label><br>
-            
-        </tr>
-    </table>
-    <form>
-        <input type="radio" id="html" name="fav_language" value="HTML">
-        <label for="html">HTML</label><br>
-        <input type="radio" id="css" name="fav_language" value="CSS">
-        <label for="css">CSS</label><br>
-        <input type="radio" id="javascript" name="fav_language"
-        value="JavaScript">
-        <label for="javascript">JavaScript</label>
-        </form>
-        <form>
-            <label for="age">อายุ:</label>&emsp;&emsp;&emsp;
-        <input type="number" id="age" >
-        </form>
-    <form>
-        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-        <label for="vehicle1"> I have a bike</label><br>
-        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-        <label for="vehicle2"> I have a car</label><br>
-        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-        <label for="vehicle3"> I have a boat</label>
-        </form>
+<body>
 
-  </body>
+    <h1>Workshop #HTML - Form </Header>
+    </h1>
+    <form>
+        <table>
+            <tr>
+                <td> <label for="fname">ชื่อ:</label></td>
+                <td> <input type="text" id="fname" name="fname"><br></td>
+            </tr>
+            <tr>
+                <td> <label for="lname">สกุล:</label></td>
+                <td> <input type="text" id="lname" name="lname"><br></td>
+            </tr>
+            <tr>
+                <td> <label for="brithday">วัน/เดือน/ปีเกิด:</label></td>
+                <td> <input type="date" id="age"><br></td>
+            </tr>
+            <tr>
+                <td> <label for="age">อายุ:</label></td>
+                <td> <input type="number" id="age"><br></td>
+            </tr>
+            <tr>
+                <td><label for="sex">เพศ:</label></td>
+                <td>
+                    <input type="radio" id="male" name="sex" value="male">
+                    <label for="html">ชาย</label>
+                    <input type="radio" id="female" name="sex" value="female">
+                    <label for="html">หญิง</label><br>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="photo">รูป:</label></td>
+                <td><input type="file" id="photo" name="photo"><br></td>
+            </tr>
+            <tr>
+                <td><label for="address">ที่อยู่:</label></td>
+                <td>
+                    <textarea id="address" name="address" cols="20" rows="5"></textarea><br>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="color">สี:</label></td>
+                <td>
+                    <form>
+                            <select id="dropdown" name="dropdown">
+                                <option value="option1">แดง</option>
+                                <option value="option2">ส้ม</option>
+                                <option value="option3">เหลือง</option>
+                                <option value="option4">เขียว</option>
+                                <option value="option5">น้ำเงิน</option>
+                                <option value="option6">คราม</option>
+                                <option value="option7">ม่วง</option>
+                                <option value="option8">ชมพู</option>
+                                <option value="option9">ขาว</option>
+                                <option value="option10">ดำ</option>
+                                <option value="option11">น้ำตาล</option>
+                                <option value="option12">เทา</option>
+                                <option value="option13">เงิน</option>
+                                <option value="option14">ทอง</option>
+                                <option value="option15">สีรุ้ง</option>
+                            </select>
+                        </form>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="music">แนวเพลงที่ชอบ:</label></td>
+                <td>
+                    <input type="radio" id="musicForFlife" name="music" value="musicForFlife">
+                    <label for="musicForFlife">เพื่อชีวืต</label>
+                    <input type="radio" id="female" name="music" value="female">
+                    <label for="html">ลูกทุ่ง</label>
+                    <input type="radio" id="female" name="music" value="female">
+                    <label for="html">หญิง</label><br>
+                </td>
+            </tr>
+        </table>
+
+</body>
+
 </html>
