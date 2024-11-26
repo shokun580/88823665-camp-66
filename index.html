@@ -6,9 +6,53 @@
   </head>  
   <body>
 
-    <h1>This is a Header</Header></h1>
-    <p>This is a paragraph.</p>
-    <p>This is a ภาษาไทย</p>
+    <h1>Workshop #HTML - Form </Header></h1>
+    <form>
+    <table>
+        <tr>
+           <td> <label for="fname">ชื่อ:</label></td>
+           <td> <input type="text" id="fname" name="fname"><br></td>
+        </tr>
+        <tr>
+            <td> <label for="lname">สกุล:</label></td>
+            <td> <input type="text" id="lname" name="lname"><br></td>
+        </tr>
+        <tr>
+            <td> <label for="Brithday">วัน/เดือน/ปีเกิด:</label></td>
+            <td>  <input type="date" id="age" ><br></td>
+        </tr>
+        <tr>
+            <td> <label for="age">อายุ:</label></td>
+            <td>  <input type="number" id="age" ><br></td>
+        </tr>
+        <tr>
+            <td> <label for="sex">เพศ:</label></td>
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html">HTML</label><br>
+            
+        </tr>
+    </table>
+    <form>
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="css" name="fav_language" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="radio" id="javascript" name="fav_language"
+        value="JavaScript">
+        <label for="javascript">JavaScript</label>
+        </form>
+        <form>
+            <label for="age">อายุ:</label>&emsp;&emsp;&emsp;
+        <input type="number" id="age" >
+        </form>
+    <form>
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> I have a bike</label><br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2"> I have a car</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"> I have a boat</label>
+        </form>
 
   </body>
 </html>
