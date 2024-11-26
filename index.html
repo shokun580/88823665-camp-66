@@ -8,8 +8,7 @@
 
 <body>
 
-    <h1>Workshop #HTML - Form </Header>
-    </h1>
+    <h1>Workshop #HTML - Form </Header></h1>
     <form>
         <table>
             <tr>
@@ -32,9 +31,9 @@
                 <td><label for="sex">เพศ:</label></td>
                 <td>
                     <input type="radio" id="male" name="sex" value="male">
-                    <label for="html">ชาย</label>
+                    <label for="male">ชาย</label>
                     <input type="radio" id="female" name="sex" value="female">
-                    <label for="html">หญิง</label><br>
+                    <label for="female">หญิง</label><br>
                 </td>
             </tr>
             <tr>
@@ -51,36 +50,50 @@
                 <td><label for="color">สี:</label></td>
                 <td>
                     <form>
-                            <select id="dropdown" name="dropdown">
-                                <option value="option1">แดง</option>
-                                <option value="option2">ส้ม</option>
-                                <option value="option3">เหลือง</option>
-                                <option value="option4">เขียว</option>
-                                <option value="option5">น้ำเงิน</option>
-                                <option value="option6">คราม</option>
-                                <option value="option7">ม่วง</option>
-                                <option value="option8">ชมพู</option>
-                                <option value="option9">ขาว</option>
-                                <option value="option10">ดำ</option>
-                                <option value="option11">น้ำตาล</option>
-                                <option value="option12">เทา</option>
-                                <option value="option13">เงิน</option>
-                                <option value="option14">ทอง</option>
-                                <option value="option15">สีรุ้ง</option>
-                            </select>
-                        </form>
+                        <select id="dropdown" name="dropdown">
+                            <option value="option1">แดง</option>
+                            <option value="option2">ส้ม</option>
+                            <option value="option3">เหลือง</option>
+                            <option value="option4">เขียว</option>
+                            <option value="option5">น้ำเงิน</option>
+                            <option value="option6">คราม</option>
+                            <option value="option7">ม่วง</option>
+                            <option value="option8">ชมพู</option>
+                            <option value="option9">ขาว</option>
+                            <option value="option10">ดำ</option>
+                            <option value="option11">น้ำตาล</option>
+                            <option value="option12">เทา</option>
+                            <option value="option13">เงิน</option>
+                            <option value="option14">ทอง</option>
+                            <option value="option15">สีรุ้ง</option>
+                        </select>
+                    </form>
                 </td>
             </tr>
             <tr>
                 <td><label for="music">แนวเพลงที่ชอบ:</label></td>
                 <td>
                     <input type="radio" id="musicForFlife" name="music" value="musicForFlife">
-                    <label for="musicForFlife">เพื่อชีวืต</label>
-                    <input type="radio" id="female" name="music" value="female">
-                    <label for="html">ลูกทุ่ง</label>
-                    <input type="radio" id="female" name="music" value="female">
-                    <label for="html">หญิง</label><br>
+                    <label for="musicForFlife">เพื่อชีวิต</label>
+                    <input type="radio" id="LukThung" name="music" value="LukThung">
+                    <label for="LukThung">ลูกทุ่ง</label>
+                    <input type="radio" id="others" name="music" value="others">
+                    <label for="html">อื่นๆ</label><br>
                 </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="allow" name="allow" value="allow" >
+                    <label for="allow">ยินยอมให้เก็บข้อมูล</label><br>
+
+                </td>
+            </tr>
+            <tr>
+                <form>
+                    <td><button type="reset">Reset</button></td>
+                    <td><button type="submit">Submit</button><br></td>
+                    <br><br>
+                </form>
+
             </tr>
         </table>
 
