@@ -1,0 +1,57 @@
+h1{
+    font-size: 20pt;
+    color:black;
+    font-family: "Yuji Mai", serif;
+        
+}
+#fname{
+    color: aqua;
+    text-align: center;
+    font-size: 15pt;
+}
+p{
+    text-align: center;
+    font-size: 15pt;
+}
+
+td {
+    padding: 10px;
+}
+
+
+body {
+    background-color: beige;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    font-family: "Kanit", sans-serif;
+
+}
+.class-p{
+    color: black;
+    font-size: 20pt;
+    text-align: center;
+}
+#reset{
+    background-color: #ff0000;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+#submit{
+    background-color: #00ffc8;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+}
