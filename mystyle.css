@@ -4,12 +4,19 @@ h1{
     font-family: "Yuji Mai", serif;
         
 }
-#fname{
-    color: aqua;
-    text-align: center;
-    font-size: 15pt;
+#fname {
+    width: 200px;
+    padding: 5px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
 }
 
+#fname:focus {
+    border-color: #ff0000;
+}
 
 td {
     padding: 10px;
@@ -30,7 +37,7 @@ body {
 }
 #reset{
     background-color: #ff0000;
-    color: black;
+    color: white;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -39,8 +46,9 @@ body {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 10px;
+    border: 2px ;
 }
-#submit{
+#submit {
     background-color: #00ffc8;
     color: black;
     padding: 10px 20px;
@@ -51,4 +59,5 @@ body {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 10px;
+    border: 2px ; 
 }
