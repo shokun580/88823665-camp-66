@@ -4,11 +4,13 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Yuji+Mai&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <title>Page Title</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yuji+Mai&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yuji+Mai&display=swap"
+        rel="stylesheet">
     <meta charset="UTF-8" />
     <link rel="stylesheet" type="text/css" href="mystyle.css">
     <meta class="">
@@ -17,7 +19,7 @@
 
 <body>
 
-    <h1>Workshop #HTML - Form</h1>
+    <h1><label class = "text-box">Workshop #HTML - Form</label></h1>
     <form>
         <table>
             <tr>
@@ -41,10 +43,10 @@
             <tr>
                 <td><label for="sex">เพศ:</label></td>
                 <td>
-                    <input type="radio" id="sex_male" name="sex" value="male">
-                    <label for="male" id = "male">ชาย</label>
-                    <input type="radio" id="sex_female" name="sex" value="female">
-                    <label for="female"id = "female">หญิง</label><br>
+                    <input type="radio" id="sex" name="sex" value="male">
+                    <label for="male" id="sex">ชาย</label>
+                    <input type="radio" id="sex" name="sex" value="female">
+                    <label for="female" id="sex">หญิง</label><br>
                 </td>
             </tr>
             <tr>
@@ -84,24 +86,24 @@
             <tr>
                 <td><label for="music">แนวเพลงที่ชอบ:</label></td>
                 <td>
-                    <input type="radio" id="musicForlife" name="music" value="musicForlife">
-                    <label for="musicForlife">เพื่อชีวิต</label>
-                    <input type="radio" id="LukThung" name="music" value="LukThung">
-                    <label for="LukThung">ลูกทุ่ง</label>
-                    <input type="radio" id="others" name="music" value="others">
-                    <label for="html">อื่นๆ</label><br>
+                    <input type="radio" id ="music" name="music" value="musicForlife">
+                    <label for="musicForlife" id ="music">เพื่อชีวิต</label>
+                    <input type="radio" id ="music" name="music" value="LukThung">
+                    <label for="LukThung" id ="music">ลูกทุ่ง</label>
+                    <input type="radio" id ="music" name="music" value="others">
+                    <label for="html"id ="music">อื่นๆ</label><br>
                 </td>
             </tr>
             <tr>
                 <td><input type="checkbox" id="allow" name="allow" value="allow">
-                    <label for="allow">ยินยอมให้เก็บข้อมูล</label><br>
+                    <label for="allow" id="allow" >ยินยอมให้เก็บข้อมูล</label><br>
 
                 </td>
             </tr>
             <tr>
 
-                <td><button type="reset" id ="reset">Reset</button></td>
-                <td><button type="submit" id = "submit">Submit</button><br></td>
+                <td><button class="btn"type = "reset"  id="reset">Reset</button></td>
+                <td><button class="btn" type = "submit"id="submit">Submit</button><br></td>
                 <br><br>
 
             </tr>
