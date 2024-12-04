@@ -4,7 +4,7 @@ h1{
     font-family: "Yuji Mai", serif;
         
 }
-#fname {
+#fname ,#lname ,#age,#date,#address{
     width: 200px;
     padding: 5px;
     font-size: 16px;
@@ -14,8 +14,12 @@ h1{
     transition: border-color 0.3s ease;
 }
 
-#fname:focus {
+#fname:focus,#lname:focus,#age:focus ,#date:focus,#address:focus{
     border-color: #ff0000;
+}
+
+#fname:hover ,#lname:hover,#age:hover,#date:hover,#address:hover{
+    border-color: #00ff00; 
 }
 
 td {
@@ -47,6 +51,13 @@ body {
     cursor: pointer;
     border-radius: 10px;
     border: 2px ;
+    animation: fristanimetion1 1s infinite;
+}
+#reset:hover{
+    background-color: #ff0000;
+    color: black;
+    box-shadow: black;
+    box-shadow: 3px 3px 3px black;
 }
 #submit {
     background-color: #00ffc8;
@@ -59,5 +70,29 @@ body {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 10px;
-    border: 2px ; 
+    border: 2px ;
+    animation: fristanimetion 1s infinite; 
+}
+#submit:hover{
+    background-color: #00ffc8;
+    color: white;
+    box-shadow: 3px 3px 3px black;
+}
+@keyframes fristanimetion{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+@keyframes fristanimetion1{
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+    
 }
