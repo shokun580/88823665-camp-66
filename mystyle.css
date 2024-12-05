@@ -24,8 +24,8 @@
     z-index: 1;
     padding: 20px 30px;
     font-size: 56px;
-    color: #000;
-    background: #fff;
+    color: #ffffff;
+    background: #000;
     border: 2px solid #ccc;
     border-radius: 10px;
     outline: none;
@@ -46,7 +46,7 @@
     background-size: 600%;
     z-index: -1;
     border-radius: 12px;
-    filter: blur(70px);
+    filter: blur(40px);
     animation: glowing 10s linear infinite;
     opacity: 1;
 }
@@ -84,9 +84,9 @@
 #photo:hover,
 #music:hover,
 #allow:hover {
-    border-color:#002BFF ;
+    border-color: #002BFF;
     background-color: #b2d5ff;
-   
+
 }
 
 td {
@@ -98,11 +98,13 @@ td {
 body {
     font-size: 20px;
     color: black;
-    margin: 0 auto;
+    margin: 0;
     background-color: #000;
+    background-image: url("_.jpeg");
     background-attachment: fixed;
+    background-size: cover;
+    background-position: center; 
     font-family: "Kanit", sans-serif;
-
 }
 
 table {
@@ -155,10 +157,10 @@ table {
     width: 100%;
     height: 100%;
     color: #000000;
-    background-color: #898989;
+    background-color: #b4b4b4;
     left: 0;
     top: 0;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 
@@ -208,6 +210,18 @@ table {
 .btn:active {
     color: #ffffff;
     font-weight: bold;
+}
+
+.Ap {
+    background-color: #efefef;
+    border: none;
+    border-radius: 25px;
+    color: #424242;
+    box-shadow: -6px -6px 10px #f9f9f9, 6px 6px 10px #00000026;
+}
+
+.Ap:hover {
+    box-shadow: 2px 2px 2px #f9f9f9, -2px -2px 2px #00000026;
 }
 
 h1 {
