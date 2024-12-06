@@ -98,7 +98,8 @@ td {
 body {
     font-size: 20px;
     color: black;
-    margin: 0;
+    margin: 0 ;
+    text-align: center;
     background-color: #000;
     background-image: url("_.jpeg");
     background-attachment: fixed;
@@ -229,4 +230,14 @@ h1 {
     font-size: 30pt;
     color: black;
     font-family: "Anton", sans-serif;
+}
+#text{
+    font-family: "Kanit", sans-serif;
+    background-image: url("005f4da87cd0dda4e143e6fcc52f38b7.jpg");
+    text-align: center;
+    font-size: 100px;
+    border-color: #00ffcc;
+    background-size: contain;
+    background-clip: text;
+    color: transparent;
 }
