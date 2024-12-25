@@ -13,26 +13,42 @@
     
     <form method="POST" action="">
         <div class="mb-3">
-            <label for="number" class="form-label">เลขที่ต้องการรู้:</label>
-            <input type="number" class="form-control" id="number" name="number" required>
+            <label for="number" class="form-label ">เลขที่ต้องการรู้ตัวแรก:</label>
+            <input type="number" class="form-control" id="number_start" name="number_start" required>
+            <label for="number" class="form-label ">เลขที่ต้องการรู้ตัวสุดท้าย:</label>
+            <input type="number" class="form-control" id="number_end" name="number_end" required>
         </div>
-        <button type="submit" class="btn btn-primary">เป็นเลขอะไร</button>
+        <button type="submit" class="btn btn-primary btn btn-danger">เป็นเลขอะไร</button>
     </form>
 
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $number = $_POST['number'];
-        echo '<div class="mt-4">';
-        echo '<div class="alert ';
-        if ($number % 2 === 0) {
-            echo 'alert-success">เลข ' . $number . ' เป็นเลขคู่';
-        } else {
-            echo 'alert-warning">เลข ' . $number . ' เป็นเลขคี่';
+        $number1 = $_POST['number_start'];
+        $number2 = $_POST['number_end'];
+        echo "<h3 class='mt-4'>เลข $number1 ถึง $number2 มีอะไรเป็นเลขคู่คี่บ้าง</h3>";
+        echo "<ul class='list-group'>";
+        for ($i = $number1; $i <= $number2; $i++) {
+            ?>
+            <div class="row">
+
+                <div class="h2 col text-start">
+                    <?php
+                    if ($i % 2 === 0) {
+                        echo "<li class='list-group-item text-success fs-6' >$i : เป็นเลขคู่</li>";
+                        
+                    } else {
+                        echo "<li class='list-group-item text-danger fs-6' >$i : เป็นเลขคี่</li>";
+                        
+                    }
+
+                    ?>
+                </div>
+            </div>
+        <?php
         }
-        echo '</div>';
-        echo '</div>';
-
-
+        ?>
+    </div>
+    <?php
     }
     ?>
 </div>
