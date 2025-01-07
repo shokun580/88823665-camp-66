@@ -11,7 +11,7 @@
 </form>
 <?php for($i=1;$i<13;$i++){?>
     <?php
-    $ans = intval($value_id) * $i;
+    $ans = intval($myinput) * $i;
     ?>
     <h1>{{$ans}}</h1>
 <?php }?>
