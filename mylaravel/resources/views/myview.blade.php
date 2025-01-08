@@ -13,5 +13,5 @@
     <?php
     $ans = intval($myinput) * $i;
     ?>
-    <h1>{{$ans}}</h1>
+    <h1>{{ $myinput . " x " . $i . " = " . ($myinput * $i) }}</h1>
 <?php }?>
