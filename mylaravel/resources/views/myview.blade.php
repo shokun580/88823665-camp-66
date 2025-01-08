@@ -3,7 +3,7 @@
 {{$value_id;}}{{$myinput}}
 <form action="{{url('/mycontroller')}}" method="POST">
     @csrf
-    <input type = "text" name = "myinput">
+    <input type = "number" name = "myinput">
     <button type = "sumbit">
         submit
     </button>
