@@ -18,8 +18,8 @@ Route::get("/mycontroller",
 Route::get("/mycontroller/{id?}",
 [MyController::class,'myfunction']);
 
-Route::post('/mycontroller/{id?}',
-[MyController::class,'myfunction']);
+// Route::post('/mycontroller/{id?}',
+// [MyController::class,'myfunction']);
 
 Route::get('/',function (){
     return view('layouts.default');
@@ -31,4 +31,6 @@ Route::get("/register",
 [RegisterController::class,'index']);
 
 Route::get("/home",
-[HomeController::class,'index'])
+[HomeController::class,'index']);
+Route::get("/",
+[HomeController::class,'index']);
