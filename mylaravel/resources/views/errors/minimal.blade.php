@@ -30,7 +30,7 @@
                         {{ trim($__env->yieldContent('code')) == '404' ? 'text-warning' : (trim($__env->yieldContent('code')) == '500' ? 'text-danger' : 'text-secondary') }}">
                         <i class="bi bi-exclamation-triangle-fill"></i>
                     </span>
-                    <h2 class="fw-semibold mb-0">@yield('title')</h2>
+                    <h2 class="fw-light mb-0">@yield('title')</h2>
                 </div>
 
                 <!-- ข้อความและลิงก์ -->
