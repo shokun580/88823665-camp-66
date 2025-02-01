@@ -9,35 +9,29 @@
             <!-- /.register-logo -->
             <div class="card">
                 <div class="card-body register-card-body">
-                    <p class="register-box-msg">Register a new membership</p>
-                    <form action="{{url('/register')}}" method="post">
+                    <p class="register-box-msg">Edit information membership</p>
+                    <form action="{{url('/user')}}" method="post">
                         @csrf
+                        @method("put")
+                        <input type="hidden" name="id" class="form-control" value="{{$data->id}}"/>
                         <div class="input-group mb-3">
-                            <input type="text" name="name" class="form-control" placeholder="Full Name" />
+                            <input type="text" name="name" class="form-control" placeholder="Full Name" value="{{$data->name}}"/>
                             <div class="input-group-text"><span class="bi bi-person"></span></div>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="email" name="email" class="form-control" placeholder="Email" />
+                            <input type="email" name="email" class="form-control" placeholder="Email" value="{{$data->email}}"/>
                             <div class="input-group-text"><span class="bi bi-envelope"></span></div>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="password" name="password"class="form-control" placeholder="Password" />
+                            <input type="password" name="password"class="form-control" placeholder="Password"/>
                             <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
                         </div>
                         <!--begin::Row-->
                         <div class="row">
-                            <div class="col-8">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        I agree to the <a href="#">terms</a>
-                                    </label>
-                                </div>
-                            </div>
                             <!-- /.col -->
-                            <div class="col-4">
+                            <div class="col-12">
                                 <div class="d-grid gap-2">
-                                    <button type="submit" class="btn btn-primary">Sign In</button>
+                                    <button type="submit" class="btn btn-primary">Save</button>
                                 </div>
                             </div>
                             <!-- /.col -->
@@ -45,9 +39,7 @@
                         <!--end::Row-->
                     </form>
                     <!-- /.social-auth-links -->
-                    <p class="mb-0">
-                        <a href="login.html" class="text-center"> I already have a membership </a>
-                    </p>
+
                 </div>
                 <!-- /.register-card-body -->
             </div>
