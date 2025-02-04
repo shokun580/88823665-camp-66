@@ -70,7 +70,7 @@
                     <div class="container-fluid">
                         <!--begin::Row-->
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <div class="card mb-4">
                                     <div class="card-header">
                                         <h3 class="card-title">User list</h3>
@@ -80,9 +80,9 @@
                                         <table class="table table-bordered">
                                             <thead>
                                                 <tr>
-                                                  <th class="col-1 text-center">#</th>
-                                                  <th class="col-6">Name</th>
-                                                  <th class="col-3 text-center">Actions</th>
+                                                    <th class="col-1 text-center">#</th>
+                                                    <th class="col-6">Name</th>
+                                                    <th class="col-3 text-center">Actions</th>
                                                     <!-- ลดขนาดปุ่ม -->
                                                 </tr>
                                             </thead>
@@ -95,12 +95,12 @@
                                                             <div class="d-flex justify-content-center gap-1">
                                                                 <a href="{{ url('/user/' . $user->id) }}"
                                                                     class="btn btn-warning btn-sm">Edit</a>
-                                                                <form action="{{ url('/user/' . $user->id) }}"
+                                                                <form action="{{ url('/user/' . $user->id) }}" onsubmit="clickme(event)"
                                                                     method="post">
                                                                     @csrf
                                                                     @method('delete')
                                                                     <button type="submit"
-                                                                        class="btn btn-danger btn-sm">Delete</button>
+                                                                        class="btn btn-danger btn-sm" >Delete</button>
                                                                 </form>
                                                             </div>
                                                         </td>
@@ -177,4 +177,29 @@
     <!--end::Body-->
 
     </html>
+@endsection
+@section('scripts')
+<script>
+    function clickme(event) {
+        event.preventDefault();
+        Swal.fire({
+            title: 'Are you sure',
+            text: 'delete it or not?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+        if (result.isConfirmed) {
+            event.target.submit(); // ให้ฟอร์มส่งข้อมูลเมื่อกดยืนยัน
+        }
+    });
+}
+    $(document).ready(function(){
+    });
+
+
+
+</script>
 @endsection
