@@ -13,7 +13,7 @@
                     <form action="{{ url('/register') }}" method="post">
                         @csrf
                         <div class="input-group mb-3">
-                            <input type="text" name="name" id= "name"onchange="return checkname();"
+                            <input type="text" name="name" id= "name"oninput="return checkname();"
                                 class="form-control" placeholder="Full Name" />
                             <div class="input-group-text"><span class="bi bi-person"></span></div>
                             <div class="valid-feedback"></div>
@@ -23,7 +23,7 @@
                         </div>
                         <div class="input-group mb-3">
                             <input type="email" name="email" id="email"
-                                class="form-control"onchange="return checkemail();" placeholder="Email" />
+                                class="form-control"oninput="return checkemail();" placeholder="Email" />
                             <div class="input-group-text"><span class="bi bi-envelope"></span></div>
                             <div class="valid-feedback"></div>
                             <div class="invalid-feedback">
@@ -31,14 +31,14 @@
                             </div>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="password" name="password" id="password" onchange="return clickme3();"
+                            <input type="password" name="password" id="password" oninput="return clickme3();"
                                 class="form-control" placeholder="Password" />
                             <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
                             <div class="valid-feedback">
-                                ok
+                                รหัสผ่านแข็งแรงมาก
                             </div>
                             <div class="invalid-feedback">
-                                กรุณาระบบข้อมูล ชื่อ-สกุล
+                                กรุณาระบุข้อมูล หรือ password ต้องมี ตัวเล็ฌกับตัวใหญ่ และ ตัวเล็ก อย่างน้อย 8 ตัว
                             </div>
                         </div>
                         <!--begin::Row-->
@@ -53,7 +53,7 @@
                             </div>
                             <!-- /.col -->
                             <div class="col-4">
-                                <div class="d-grid gap-2">
+                                <div class="d-grid gap-2" onclick="return checkValue()">
                                     <button type="submit" class="btn btn-primary">Sign In</button>
                                 </div>
                             </div>
@@ -72,10 +72,10 @@
         </div>
     </div>
 @endsection
+
+
 @section('scripts')
     <script>
-        document.querySelector("body > div > div > div.card > div > form > div:nth-child(2) > input");
-
         function checkname() {
             $('#name').removeClass('is-invalid');
             $('#name').removeClass('is-valid');
@@ -94,7 +94,6 @@
             let emailValue = email.val().trim();
             const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z]+\.[a-zA-Z]{2,}$/;
 
-            // รีเซ็ต Class ก่อนตรวจสอบใหม่
             email.removeClass('is-invalid is-valid');
 
             if (emailValue === '') {
@@ -110,16 +109,31 @@
         }
 
         function clickme3() {
-            $('#password').removeClass('is-invalid');
-            $('#password').removeClass('is-valid');
-            let password = document.getElementById('password');
-            // let email = document.getElementById('email');
-            if (password.value == '') {
-                $('#password').addClass('is-invalid'); //error
+            let password = $('#password');
+            let passwordValue = password.val().trim();
+            const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+
+            password.removeClass('is-invalid is-valid');
+
+            if (passwordValue === '') {
+                password.addClass('is-invalid'); // ถ้าช่องว่างให้ขึ้น Invalid
+                return false;
+            } else if (!passwordPattern.test(passwordValue)) {
+                password.addClass('is-invalid'); // ถ้า Format ไม่ถูกต้อง ให้ขึ้น Invalid
+                return false;
             } else {
-                $('#password').addClass('is-valid'); //ok
+                password.addClass('is-valid'); // ถ้าถูกต้อง ให้ขึ้น Valid
+                return true;
             }
-            return true;
+        }
+
+        function checkValue() {
+            let checkbox = document.getElementById("flexCheckDefault");
+            if (!checkbox.checked){
+                alert("🚨 Please check the checkbox");
+                return false;
+            }
+
         }
     </script>
 @endsection
