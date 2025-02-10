@@ -80,7 +80,7 @@
             $('#name').removeClass('is-invalid');
             $('#name').removeClass('is-valid');
             let name = document.getElementById('name');
-            // let email = document.getElementById('email');
+            
             if (name.value == '') {
                 $('#name').addClass('is-invalid'); //error
             } else {
