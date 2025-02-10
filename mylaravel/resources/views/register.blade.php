@@ -27,7 +27,7 @@
                             <div class="input-group-text"><span class="bi bi-envelope"></span></div>
                             <div class="valid-feedback"></div>
                             <div class="invalid-feedback">
-                                กรุณาระบุข้อมูล หรือ กรอก email ให้ถูกต้อง
+                                กรุณาระบุข้อมูล หรือ กรอก email ให้ถูกต้องด้วยครับ
                             </div>
                         </div>
                         <div class="input-group mb-3">
