@@ -80,7 +80,7 @@
             $('#name').removeClass('is-invalid');
             $('#name').removeClass('is-valid');
             let name = document.getElementById('name');
-            
+
             if (name.value == '') {
                 $('#name').addClass('is-invalid'); //error
             } else {
@@ -129,8 +129,13 @@
 
         function checkValue() {
             let checkbox = document.getElementById("flexCheckDefault");
-            if (!checkbox.checked){
-                alert("🚨 Please check the checkbox");
+            if (!checkbox.checked) {
+                Swal.fire({
+                    icon: "error",
+                    title: "ทำไมไม่กดยอมรับเงื่อนไข",
+                    text: "ยอมรับเงื่อนไขการใช้งานด้วยจะได้ใช้งานได้",
+                });
+
                 return false;
             }
 

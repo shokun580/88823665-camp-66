@@ -6,27 +6,35 @@ use App\Http\Controllers\loginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductController;
+use App\Http\Middleware\CheckLogin;
+
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/hello', function () {
-    return "</h1>hello world</h1>";
-});
-Route::get("/mycontroller",
-[MyController::class,'myfunction']);
+// Route::get('/hello', function () {
+//     return "</h1>hello world</h1>";
+// });
+
+// Route::get("/mycontroller",
+// [MyController::class,'myfunction']);
 
 
-Route::get("/mycontroller/{id?}",
-[MyController::class,'myfunction']);
+// Route::get("/mycontroller/{id?}",
+// [MyController::class,'myfunction']);
 
 // Route::post('/mycontroller/{id?}',
 // [MyController::class,'myfunction']);
 
-Route::get('/',function (){
-    return view('layouts.default');
-});
+// Route::get('/',function (){
+//     return view('layouts.default');
+// });
+
 Route::get("/login",
 [LoginController::class,'index']);
+
+Route::post("/login",
+[LoginController::class,'login']);
 
 Route::get("/register",
 [RegisterController::class,'index']);
@@ -36,6 +44,7 @@ Route::post("/register",
 
 Route::get("/home",
 [HomeController::class,'index']);
+
 Route::get("/",
 [HomeController::class,'index']);
 
@@ -56,3 +65,6 @@ Route::get("/mycontroller/{id?}",
 
 Route::post("/mycontroller/{id?}",
 [MyController::class,'myfunction']);
+
+Route::get('/product',[ProductController::class,'index'])->middleware([CheckLogin::class,]);
+Route::post('/product',[ProductController::class,'store'])->middleware([CheckLogin::class,]);
