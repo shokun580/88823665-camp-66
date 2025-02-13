@@ -10,7 +10,7 @@
             <div class="card">
                 <div class="card-body register-card-body">
                     <p class="register-box-msg">Register a new membership</p>
-                    <form action="{{ url('/register') }}" method="post">
+                    <form action="{{ url('/register') }}" onsubmit ="return checkall()" method="post">
                         @csrf
                         <div class="input-group mb-3">
                             <input type="text" name="name" id= "name"oninput="return checkname();"
@@ -61,7 +61,6 @@
                         </div>
                         <!--end::Row-->
                     </form>
-                    {{-- <button type="button" class="btn btn-danger" onclick="clickme()"> cilck me</button> --}}
                     <!-- /.social-auth-links -->
                     <p class="mb-0">
                         <a href="login.html" class="text-center"> I already have a membership </a>
@@ -83,10 +82,12 @@
 
             if (name.value == '') {
                 $('#name').addClass('is-invalid'); //error
+                return false;
             } else {
                 $('#name').addClass('is-valid'); //ok
+                return true;
             }
-            return true;
+
         }
 
         function checkemail() {
@@ -135,10 +136,14 @@
                     title: "ทำไมไม่กดยอมรับเงื่อนไข",
                     text: "ยอมรับเงื่อนไขการใช้งานด้วยจะได้ใช้งานได้",
                 });
-
                 return false;
+            } else {
+                return true;
             }
+        }
 
+        function checkall() {
+            return checkname() && checkemail() && clickme3() && checkValue();
         }
     </script>
 @endsection
