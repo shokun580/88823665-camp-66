@@ -21,8 +21,8 @@
         <div class="row" id='add-product'>
 
         </div>
-        <div class="mt-3 row">
-            <button class="btn btn-success" type="submit">บันทึก</button>
+        <div class="d-flex justify-content-end mt-3 row ">
+            <button class="btn btn-success col-1 " type="submit">บันทึก</button>
         </div>
     </form>
     <table class="mt-3 table">
