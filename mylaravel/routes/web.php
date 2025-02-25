@@ -68,3 +68,9 @@ Route::post("/mycontroller/{id?}",
 
 Route::get('/product',[ProductController::class,'index'])->middleware([CheckLogin::class,]);
 Route::post('/product',[ProductController::class,'store'])->middleware([CheckLogin::class,]);
+
+Route::get('/logout',function(){
+    session()->forget('user');
+    session()->flush();
+return redirect('/login');
+});

@@ -1,8 +1,10 @@
 @extends('layouts.default')
 
 @section('content')
-@include('components.header')
-@include('components.menu')
+<div class="app-wrapper">
+    @include('components.header')
+    @include('components.menu')
+    <div class = "p-3">
     <form action="{{ url('product') }}" method="post">
         @csrf
         <div class="row">
@@ -34,8 +36,28 @@
         </thead>
         <tbody>
 
+            <?php foreach ($categorys as $index => $category) {?>
+            <tr>
+                <td>{{$index + 1}}</td>
+                <td>{{$category->name}}</td>
+                <td>
+                <?php
+                $name= '';
+                foreach ($products->where('category_id', $category->id) as $product) {
+                    $name  = $user->where('id',$product->user_id)->first()->name;
+                    ?>
+                    <ul>
+                        <li>{{$product->name}}</li>
+                    </ul>
+                    <?php } ?>
+                </td>
+                <td>{{$name}}</td>
+            </tr>
+            <?php }?>
         </tbody>
     </table>
+</div>
+</div>
 @endsection
 
 @section('scripts')
